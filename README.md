@@ -12,4 +12,4 @@ Add script on page, then -
       // Regular focus still works  
     });
 
-Will try to add it to gallary soon.
+Will try to add it to gallery soon.
