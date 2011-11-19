@@ -1,5 +1,5 @@
 * FocusPosition
-** It's a small module called focusPosition which takes allows Node.focus() to take position argument "end" or number of chars
+  It's a small module called focusPosition which takes allows Node.focus() to take position argument "end" or number of chars
 ** How to Use
    Add script on page, then -
    YUI().use("node", "qotd-focusPosition", function(Y){
@@ -9,4 +9,4 @@
      
      // Regular focus still works
    });
-** Will try to add it to gallary soon
+*** Will try to add it to gallary soon
