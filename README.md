@@ -5,7 +5,7 @@ How to Use
 ----------
 Add script on page, then -
 
-    YUI().use("node", "qotd-focusPosition", function(Y) {  
+    YUI().use("node", "focusPosition", function(Y) {  
       Y.one("textarea").focus(3);  
       // Or  
       Y.one("textarea").focus("end");  

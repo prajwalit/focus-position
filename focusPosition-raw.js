@@ -11,7 +11,7 @@
  * This method (just) registers the module so that it can attached to a YUI instance
  * via the use method. It's executed at YUI().use(...) phase.
  */
-YUI.add("qotd-focusPosition", function(Y) {
+YUI.add("focusPosition", function(Y) {
   var _focus = Y.Node.prototype.focus;
 
   //Y.Node.prototype._focus = _focus;
