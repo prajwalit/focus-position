@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>YUI 3: Focus Position Module</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <style type="text/css">
+      html {
+          overflow-y: scroll;
+      }
+      header {
+          border-bottom: 1px solid #aaa;
+      }
+      footer {
+          border-top: 1px solid #aaa;
+          padding-top: 10px;
+      }
+      a {
+          font-size: 13px;
+          color: maroon;
+      }
+      header, footer, .doc {
+          width: 900px;
+          margin: auto;
+      }
+      .demo {
+          margin: 40px auto;
+      }
+      pre {
+          background: #eee;
+          border: 1px solid #ccc;
+          padding: 5px;
+      }
+      .fork {
+          float: right;
+          font-size: 15px;
+      }
+      textarea {
+          width: 500px;
+          display: block;
+      }
+      input {
+        width: 40px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="fork" href="https://github.com/prajwalit/YUI-Node-focus-position">Fork it on Github</a>
+      <h2>YUI 3: Focus Position</h2>
+      <p>A small YUI3 module which modifies Node's focus() function to take position argument "end" or number of characters and places cursor there.</p>
+    </header>
+
+    <div class="doc">
+      <div class="demo">
+        <h4>Demo:</h4>
+        <label>Cursor position:</label><input type="text" value="end"></input><button id="updateCursor">Update</button>
+        <br/><br/>
+        <textarea>@Prajwalit </textarea>
+      </div>
+  <!--     <h4>To Use Gallery Module:</h4> -->
+  <!--     <pre> -->
+  <!-- &lt;script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"&gt;&lt;/script&gt; -->
+  <!-- &lt;script type="text/javascript"&gt; -->
+  <!--   YUI ({ -->
+  <!--     gallery: "gallery-2012.05.09-20-27" -->
+  <!--   }).use ("gallery-focus-position", function (Y) { -->
+  <!--     Y.one("textarea").focus ("end"); -->
+  <!--   }); -->
+  <!-- &lt;/script&gt;</pre> -->
+      <h4>To Use Downloaded Code:</h4>
+      <pre>
+  &lt;script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="focusPosition.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript"&gt;
+    YUI ().use ("focusPosition", function (Y) {
+      Y.one("textarea").focus ("end");
+    });
+  &lt;/script&gt;</pre>
+    </div>
+    <footer>
+      <a href="https://github.com/prajwalit/YUI-Node-focus-position">Download Code</a>
+      | <a href="http://prajwalit.com">Prajwalit.com</a>
+      | @<a href="http://twitter.com/prajwalit">prajwalit</a>
+    </footer>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+    <script type="text/javascript" src="focusPosition.js"></script>
+    <script type="text/javascript">
+      YUI (/*{
+        gallery: "gallery-2012.05.09-20-27"
+      }*/).use ("focusPosition", "node", function (Y) {
+        Y.one ("textarea").focus ("end");
+        Y.one ("#updateCursor").on ("click", function() {
+          var inputVal = Y.one ("input").get ("value");
+          if (inputVal !== "end") {
+            inputVal = parseInt (inputVal, 10);
+          }
+          //alert (inputVal);
+          Y.one ("textarea").focus (inputVal);
+        });
+      });
+      
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1214990-4']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
